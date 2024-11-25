@@ -40,11 +40,11 @@ public class Application {
             } else {
                 ball = ball + 1;
             }
-                if (user3 == com3) {
-                    strike = strike + 1;
-                } else {
-                    ball = ball + 1;
-                }
+            if (user3 == com3) {
+                strike = strike + 1;
+            } else {
+                ball = ball + 1;
+            }
 
                 // TODO: 결과를 출력하세요 (예: "1 스트라이크")
                 System.out.println(strike + " strike " + ball + " ball");
