@@ -1,20 +1,26 @@
 package numberbaseball;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Application {
+public class OldApplication {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //랜덤 스캐너를 넣을 경우 반복문 안에 넣게 되면 반복을 돌릴 때 마다 새로운 랜덤을 만든다
 
         boolean isCorrect = false; // 정답 여부
 
         System.out.println("숫자 야구 게임을 시작합니다!");
         System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
 
-        int com1 = 1;
-        int com2 = 2;
-        int com3 = 3;
+//        int computerNumber1 = 1; //변수 이름은 최대한 자세히
+//        int computerNumber2 = 2;
+//        int computerNumber3 = 3;
+        List<Integer> computerNumbers = new ArrayList<>();
+        computerNumbers.add(3);
+        computerNumbers.add(6);
+        computerNumbers.add(9);
 
         while (!isCorrect) {
 
@@ -30,23 +36,9 @@ public class Application {
             int strike = 0;           // 스트라이크 개수
             int ball = 0;            // 볼 개수
 
-            if (user1 == com1) {
-                strike = strike + 1;
-            } else {
-                ball = ball + 1;
-            }
-            if (user2 == com2) {
-                strike = strike + 1;
-            } else {
-                ball = ball + 1;
-            }
-            if (user3 == com3) {
-                strike = strike + 1;
-            } else {
-                ball = ball + 1;
-            }
 
-                // TODO: 결과를 출력하세요 (예: "1 스트라이크")
+
+            // TODO: 결과를 출력하세요 (예: "1 스트라이크")
                 System.out.println(strike + " strike " + ball + " ball");
 
                 // TODO: 3 스트라이크인 경우 게임을 끝내세요
